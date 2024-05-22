@@ -1,5 +1,6 @@
 import platform
 import psutil
+import GPUtil
 
 system_info = platform.uname()
 
@@ -36,7 +37,7 @@ print(f"Used Disk Space: {disk_info.used} bytes")
 print(f"Free Disk Space: {disk_info.free} bytes")
 print(f"Disk Space Utilization: {disk_info.percent}%")
 
-gpus = gputil.getGPUs()
+gpus = GPUtil.getGPUs()
 
 if not gpus:
     print("No GPU detected.")
