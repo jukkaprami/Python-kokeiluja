@@ -30,6 +30,14 @@ print (obj_Disk.used / (1024.0 ** 3))
 print (obj_Disk.free / (1024.0 ** 3))
 print (obj_Disk.percent)
 
+memory_info = psutil.virtual_memory()
+
+print("\nMemory Information:")
+print(f"Total Memory: {memory_info.total} bytes")
+print(f"Available Memory: {memory_info.available} bytes")
+print(f"Used Memory: {memory_info.used} bytes")
+print(f"Memory Utilization: {memory_info.percent}%")
+
 
 speed_test = speedtest.Speedtest()
 
@@ -42,3 +50,4 @@ download_speed = bytes_to_mb(speed_test.download())
 print("Your Download speed is", download_speed, "MB")
 upload_speed = bytes_to_mb(speed_test.upload())
 print("Your Upload speed is", upload_speed, "MB")
+
