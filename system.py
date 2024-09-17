@@ -38,6 +38,8 @@ print(f"Available Memory: {memory_info.available} bytes")
 print(f"Used Memory: {memory_info.used} bytes")
 print(f"Memory Utilization: {memory_info.percent}%")
 
+# Calling psutil.cpu_precent() for 4 seconds
+print('The CPU usage is: ', psutil.cpu_percent(4))
 
 speed_test = speedtest.Speedtest()
 
